@@ -16,3 +16,21 @@ while i in range (0,len(depths)):
 	i+=1
 
 print(increase.count(True))
+
+windows=[]
+i=0
+while i in range(0,len(depths)-2):
+	windowtotal=depths[i]+depths[i+1]+depths[i+2]
+	windows.append(windowtotal)
+	i+=1
+
+windowincrease=[]
+i=0
+while i in range(0,len(windows)):
+	if i!=0:
+		windowincrease.append(windows[i]>windows[i-1])
+	else:
+		windowincrease.append("")
+	i+=1
+
+print(windowincrease.count(True))
