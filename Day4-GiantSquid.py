@@ -14,6 +14,7 @@ while i!="0":
 		n+=1
 	x+=1
 	i=input()
+boards2=boards.copy()
 
 i=0
 while i in range(0,len(numbers)):
@@ -39,6 +40,55 @@ while i in range(0,len(numbers)):
 						row=5
 						board=len(boards)
 						i=len(numbers)
+				column+=1
+			row+=1
+		board+=1
+	i+=1
+
+total=0
+row=0
+while row in range(0,5):
+	column=0
+	while column in range(0,5):
+		if win[row][column]!=-1:
+			total+=int(win[row][column])
+		column+=1
+	row+=1
+
+score=total*last
+print(score)
+
+boards=boards2.copy()
+i=0
+while i in range(0,len(numbers)):
+	board=0
+	while board in range(0,len(boards)):
+		row=0
+		while row in range(0,5):
+			column=0
+			while column in range(0,5):
+				if int(boards[board][row][column])==numbers[i]:
+					boards[board][row][column]=-1
+					r=0
+					rowtotal=0
+					columntotal=0
+					while r in range(0,5):
+						rowtotal+=int(boards[board][row][r])
+						columntotal+=int(boards[board][r][column])
+						r+=1
+					if columntotal==-5 or rowtotal==-5:
+						if len(boards)==1:
+							win=boards[0]
+							last=numbers[i]
+							column=5
+							row=5
+							board=len(boards)
+							i=len(numbers)
+						else:
+							boards.pop(board)
+							column=5
+							row=5
+							board-=1
 				column+=1
 			row+=1
 		board+=1
