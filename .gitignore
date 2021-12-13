@@ -132,6 +132,6 @@ dmypy.json
 .DS_Store
 
 #IntelliJ files
-.iml
-Day6/.idea/
-Day6/out/
+Day6/Java/Day6-LanternFish.iml
+Day6/Java/.idea/
+Day6/Java/out/
