@@ -133,4 +133,5 @@ dmypy.json
 
 #IntelliJ files
 .iml
-.idea
+Day6/.idea/
+Day6/out/
