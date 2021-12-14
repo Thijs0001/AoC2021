@@ -10,9 +10,6 @@ while i in range(0,len(inputs)):
 days=int(input("\nHow many days do you want to simulate?\n"))
 
 i=0
-x=0
-y=0
-z=0
 while i in range(0,days):
 	z=fishes[7]
 	fishes[7]=fishes[8]
