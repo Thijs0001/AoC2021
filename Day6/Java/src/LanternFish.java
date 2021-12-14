@@ -12,7 +12,7 @@ public class LanternFish {
     public void subTimer() {
         if (this.timer == 0) {
             this.timer=6;
-        } else{
+        } else {
             this.timer--;
         }
     }
